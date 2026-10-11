@@ -69,8 +69,7 @@ p { margin: 0; }
 .site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(220,227,236,.8); background: rgba(246,248,251,.88); backdrop-filter: blur(18px); }
 .nav-wrap { display: flex; min-height: 74px; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 850; letter-spacing: -.02em; white-space: nowrap; }
-.brand-mark { display: grid; width: 39px; height: 39px; place-items: center; color: #fff; border-radius: 12px; background: linear-gradient(145deg, var(--blue), var(--cyan)); box-shadow: 0 8px 18px rgba(23,105,224,.22); }
-.brand-mark svg { width: 24px; }
+.brand-logo { width: 42px; height: 42px; flex: 0 0 42px; object-fit: cover; border: 1px solid rgba(255,255,255,.16); border-radius: 12px; background: #05070a; box-shadow: 0 8px 18px rgba(23,105,224,.22); }
 .brand small { display: block; margin-top: -3px; color: var(--muted); font-size: .62rem; font-weight: 700; letter-spacing: .1em; }
 .site-nav { display: flex; align-items: center; gap: 2px; margin-left: auto; }
 .site-nav a { padding: 9px 10px; border-radius: 9px; color: #526177; font-size: .84rem; font-weight: 700; text-decoration: none; }
@@ -202,7 +201,8 @@ p { margin: 0; }
 .team-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
 .member { position: relative; padding: 29px; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; }
 .member-top { display: flex; align-items: center; gap: 16px; }
-.avatar { display: grid; flex: 0 0 64px; width: 64px; height: 64px; place-items: center; color: #fff; border-radius: 20px; background: linear-gradient(145deg, var(--blue), var(--cyan)); font-size: 1.08rem; font-weight: 900; }
+.avatar { display: block; flex: 0 0 88px; width: 88px; height: 88px; object-fit: cover; object-position: center 24%; border: 3px solid #fff; border-radius: 22px; background: linear-gradient(145deg, var(--blue), var(--cyan)); box-shadow: 0 10px 28px rgba(20,36,60,.18); }
+.member-top > div { min-width: 0; }
 .member:nth-child(2) .avatar { background: linear-gradient(145deg, #6144d3, #987eea); }
 .member:nth-child(3) .avatar { background: linear-gradient(145deg, #c27808, #f5b441); }
 .member:nth-child(4) .avatar { background: linear-gradient(145deg, #1d805c, #43bd8f); }
@@ -291,6 +291,7 @@ p { margin: 0; }
   .timeline-content header .status { display: inline-flex; margin-top: 8px; }
   .toolbar { align-items: stretch; flex-direction: column; }
   .field.full { grid-column: auto; }
+  .avatar { flex-basis: 76px; width: 76px; height: 76px; border-radius: 19px; }
   .footer-bottom { align-items: start; flex-direction: column; }
 }
 

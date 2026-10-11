@@ -1,4 +1,4 @@
-document.head.insertAdjacentHTML("beforeend", '<link rel="icon" href="favicon.svg" type="image/svg+xml">');
+document.head.insertAdjacentHTML("beforeend", '<link rel="icon" href="logo.jpeg" type="image/jpeg">');
 
 const pages = [
   ["home", "Home", "index.html"],
@@ -31,7 +31,7 @@ if (header) {
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="PhysiV-Lab home">
-          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-width="2" d="M16 4c7 0 12 5.4 12 12s-5 12-12 12S4 22.6 4 16 9 4 16 4Zm0 0c4 4 4 20 0 24M4 16h24"/><circle cx="16" cy="16" r="3" fill="currentColor"/></svg></span>
+          <img class="brand-logo" src="logo.jpeg" alt="" width="42" height="42">
           <span class="brand-text">PhysiV-Lab<small>R26-IT-150</small></span>
         </a>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
@@ -50,7 +50,7 @@ if (footer) {
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
-          <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">Φ</span><span>PhysiV-Lab</span></a><p>A mobile virtual physics laboratory bringing practical experimentation, intelligent support, and personalised learning into one accessible ecosystem.</p></div>
+          <div class="footer-brand"><a class="brand" href="index.html"><img class="brand-logo" src="logo.jpeg" alt="" width="42" height="42"><span>PhysiV-Lab</span></a><p>A mobile virtual physics laboratory bringing practical experimentation, intelligent support, and personalised learning into one accessible ecosystem.</p></div>
           <div><div class="footer-title">Explore</div><div class="footer-links">${pages.slice(1,5).map(([,label,url]) => `<a href="${url}">${label}</a>`).join("")}</div></div>
           <div><div class="footer-title">Project</div><div class="footer-links"><a href="team.html">Research team</a><a href="contact.html">Contact</a><a href="https://github.com/sachintha-nirmal-sm/R26-IT-150" target="_blank" rel="noreferrer">Source repository ↗</a></div></div>
         </div>
