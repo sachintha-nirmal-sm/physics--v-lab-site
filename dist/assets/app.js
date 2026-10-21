@@ -123,11 +123,22 @@ const filterDocuments = () => {
 documentSearch?.addEventListener("input", filterDocuments);
 
 const toast = document.querySelector("[data-toast]");
+const contactForm = document.querySelector("[data-contact-form]");
+const getContactMessage = (form) => {
+  const data = new FormData(form);
+  const subject = data.get("subject");
+  const text = `Subject: ${subject}\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nAudience: ${data.get("audience")}\n\nMessage:\n${data.get("message")}\n\nProject: PhysiV-Lab — R26-IT-150`;
+  return { subject, text };
+};
 const showToast = (message) => { toast.textContent = message; toast.classList.add("show"); setTimeout(() => toast.classList.remove("show"), 2800); };
-document.querySelector("[data-contact-form]")?.addEventListener("submit", async (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const text = `Subject: ${data.get("subject")}\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nAudience: ${data.get("audience")}\n\nMessage:\n${data.get("message")}\n\nProject: PhysiV-Lab — R26-IT-150`;
+  const { text } = getContactMessage(event.currentTarget);
   try { await navigator.clipboard.writeText(text); showToast("Message template copied to your clipboard."); }
   catch { const area = document.createElement("textarea"); area.value = text; document.body.appendChild(area); area.select(); document.execCommand("copy"); area.remove(); showToast("Message template copied."); }
+});
+document.querySelector("[data-open-mail]")?.addEventListener("click", () => {
+  if (!contactForm.reportValidity()) return;
+  const { subject, text } = getContactMessage(contactForm);
+  window.location.href = `mailto:indunil.d@sliit.lk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 });
