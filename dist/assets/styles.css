@@ -50,6 +50,7 @@ button { cursor: pointer; }
 .eyebrow { margin: 0 0 12px; color: var(--blue); font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 h1, h2, h3 { margin: 0; letter-spacing: -.035em; line-height: 1.12; }
 h1 { max-width: 900px; font-size: clamp(2.7rem, 6.5vw, 5.6rem); }
+.hero h1 { font-size: clamp(2.25rem, 5.5vw, 4.5rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.35rem); }
 h3 { font-size: 1.25rem; }
 p { margin: 0; }
@@ -305,7 +306,7 @@ p { margin: 0; }
   .nav-wrap { min-height: 66px; }
   .site-nav { top: 67px; }
   .hero { padding-top: 62px; }
-  .hero h1 { max-width: 100%; font-size: clamp(2.35rem, 12vw, 3.4rem); overflow-wrap: break-word; }
+  .hero h1 { max-width: 100%; font-size: clamp(2.15rem, 10.5vw, 3rem); overflow-wrap: break-word; }
   .hero-visual { min-height: 450px; transform: scale(.86); transform-origin: top center; }
   .float-card.one { left: -7%; }
   .float-card.two { right: -7%; }
