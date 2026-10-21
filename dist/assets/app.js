@@ -69,7 +69,7 @@ const searchIndex = [
   ["Technologies", "Flutter, FastAPI, Firebase, MongoDB, RAG, Flame, and AI services.", "domain.html#technologies"],
   ["Milestones", "Proposal, progress presentations, final assessment, and viva.", "milestones.html"],
   ["Documents", "Topic assessment, proposals, checklists, and thesis records.", "documents.html"],
-  ["Presentations", "Proposal and Progress Presentation 1 slide decks.", "presentations.html"],
+  ["Presentations", "Proposal, progress, and final presentation slide decks.", "presentations.html"],
   ["Research team", "Four researchers and their component responsibilities.", "team.html"],
   ["Contact", "A copy-ready general project enquiry template.", "contact.html"],
 ];

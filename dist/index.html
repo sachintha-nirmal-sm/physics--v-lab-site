@@ -28,7 +28,7 @@
   </section>
 
   <section class="section-tight"><div class="container stat-strip reveal">
-    <div class="stat"><strong>4</strong><span>integrated research components</span></div><div class="stat"><strong>6–11</strong><span>original target grade range</span></div><div class="stat"><strong>1</strong><span>continuous learning ecosystem</span></div><div class="stat"><strong>SDG 4</strong><span>quality education alignment</span></div>
+    <div class="stat"><strong>4</strong><span>integrated research components</span></div><div class="stat"><strong>9 –11</strong><span>original target grade range</span></div><div class="stat"><strong>End-to-end</strong><span>learning and feedback journey</span></div><div class="stat"><strong>SDG 4</strong><span>quality education alignment</span></div>
   </div></section>
 
   <section class="section surface">
@@ -51,7 +51,15 @@
 
   <section class="section surface">
     <div class="container grid-2" style="align-items:center">
-      <figure class="image-frame reveal"><img src="assets/system-architecture.webp" width="1400" height="933" loading="lazy" alt="Four-layer PhysiV-Lab system architecture diagram"><figcaption class="caption">Integrated four-layer architecture from the common solution report.</figcaption></figure>
+      <figure class="architecture-visual reveal" aria-labelledby="architecture-caption"><div class="architecture-flow">
+        <div class="architecture-node"><span class="architecture-index">01</span><div><strong>Learner experience</strong><span>Flutter mobile application</span></div></div>
+        <div class="architecture-connector" aria-hidden="true">↓</div>
+        <div class="architecture-node architecture-node-primary"><span class="architecture-index">02</span><div><strong>Learning modules</strong><span>AI support · Games · Virtual practicals</span></div></div>
+        <div class="architecture-connector" aria-hidden="true">↓</div>
+        <div class="architecture-node"><span class="architecture-index">03</span><div><strong>Service integration</strong><span>FastAPI · REST / JSON · Notifications</span></div></div>
+        <div class="architecture-connector" aria-hidden="true">↓</div>
+        <div class="architecture-node"><span class="architecture-index">04</span><div><strong>Learning data</strong><span>Firebase · Firestore · MongoDB Atlas</span></div></div>
+      </div><figcaption class="caption" id="architecture-caption">A shared mobile workflow connects specialised learning features with intelligent services and persistent student data.</figcaption></figure>
       <div><p class="eyebrow">How it connects</p><h2>One architecture. Four specialised contributions.</h2><div class="steps"><div class="step"><div class="step-index">1</div><div><h3>Learn & discover</h3><p>Structured lessons, contextual search, and AI-supported explanations establish the concept.</p></div></div><div class="step"><div class="step-index">2</div><div><h3>Practise & assess</h3><p>Games, quizzes, and virtual practicals turn knowledge into observable student action.</p></div></div><div class="step"><div class="step-index">3</div><div><h3>Adapt & re-engage</h3><p>Analytics identify difficulty and trigger targeted feedback, recommendations, and personalised reminders.</p></div></div></div></div>
     </div>
   </section>
